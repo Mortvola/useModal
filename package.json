@@ -2,7 +2,7 @@
   "name": "@mortvola/usemodal",
   "version": "0.1.6",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/useModal.js",
   "types": "./dist/useModal.d.ts",
   "scripts": {
     "test": "exit",
