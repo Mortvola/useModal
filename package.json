@@ -1,10 +1,11 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "exit"
+    "test": "exit",
+    "build": "tsc -p src"
   },
   "repository": {
     "type": "git",
