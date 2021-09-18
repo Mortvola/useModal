@@ -1,6 +1,6 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/useModal.d.ts",
@@ -24,5 +24,9 @@
   "dependencies": {
     "@types/react": "^17.0.21",
     "react": "^17.0.2"
-  }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ]
 }
