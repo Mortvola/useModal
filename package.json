@@ -2,7 +2,8 @@
   "name": "@mortvola/usemodal",
   "version": "0.1.2",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/useModal.d.ts",
   "scripts": {
     "test": "exit",
     "build": "tsc -p src"
