@@ -1,0 +1,19 @@
+{
+  "name": "@mortvola/usemodal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mortvola/useModal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mortvola/useModal/issues"
+  },
+  "homepage": "https://github.com/Mortvola/useModal#readme"
+}
