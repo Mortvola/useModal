@@ -1,12 +1,12 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "",
   "main": "./dist/useModal.js",
   "types": "./dist/useModal.d.ts",
   "scripts": {
     "test": "exit",
-    "build": "tsc -p src"
+    "build": "webpack --config-name useModal --env production"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,19 @@
   "dependencies": {
     "@types/react": "^17.0.21",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.3"
+    "react-bootstrap": "^1.6.3",
+    "react-dom": "^17.0.2"
   },
   "files": [
     "dist",
     "package.json"
-  ]
+  ],
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "style-loader": "^3.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.8.0"
+  }
 }

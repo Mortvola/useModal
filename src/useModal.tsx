@@ -1,5 +1,6 @@
 import React, { useState, ReactElement, useCallback } from 'react';
 import { Modal } from 'react-bootstrap';
+import styles from './useModal.module.css';
 
 type ShowCallback = (() => void);
 type OnSave = (() => void);
@@ -11,8 +12,6 @@ export type UseModalType<T> = [
   ShowCallback,
 ];
 
-type SizeType = 'sm' | 'lg' | 'xl';
-
 export interface ModalProps {
   setShow: (show: boolean) => void;
   onHide?: OnHide,
@@ -21,7 +20,7 @@ export interface ModalProps {
 
 function useModal<T>(
   Dialog: React.FC<T & ModalProps>,
-  size?: SizeType,
+  modalProps?: Record<string, unknown>,
   onSave?: OnSave,
 ): UseModalType<T & { onHide?: () => void }> {
   const [showDialog, setShowDialog] = useState(false);
@@ -33,7 +32,7 @@ function useModal<T>(
       }
 
       setShowDialog(show);
-    }
+    };
 
     const handleHide = () => {
       if (props.onHide && showDialog) {
@@ -54,15 +53,15 @@ function useModal<T>(
       <Modal
         show={showDialog}
         onHide={handleHide}
-        size={size}
         scrollable
         enforceFocus={false}
-        contentClassName="modal-content-fix"
+        {...modalProps}
+        contentClassName={styles.modalContextFix}
       >
         <Dialog {...props} setShow={localSetShow} onConfirm={handleSave} />
       </Modal>
     );
-  }, [Dialog, onSave, showDialog, size]);
+  }, [Dialog, modalProps, onSave, showDialog]);
 
   return [
     createDialog,
@@ -70,9 +69,9 @@ function useModal<T>(
   ];
 }
 
-export function makeUseModal<T>(Dialog: React.FC<T & ModalProps>, size?: SizeType) {
+export function makeUseModal<T>(Dialog: React.FC<T & ModalProps>, props?: Record<string, unknown>) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return (): UseModalType<T & { onHide?: () => void }> => useModal<T>(Dialog, size);
+  return (): UseModalType<T & { onHide?: () => void }> => useModal<T>(Dialog, props);
 }
 
 export default useModal;
