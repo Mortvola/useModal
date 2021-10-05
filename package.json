@@ -1,6 +1,6 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "",
   "main": "./dist/useModal.js",
   "types": "./dist/useModal.d.ts",
