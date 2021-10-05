@@ -1,12 +1,12 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "",
   "main": "./dist/useModal.js",
   "types": "./dist/useModal.d.ts",
   "scripts": {
     "test": "exit",
-    "build": "webpack --config-name useModal --env production"
+    "build": "webpack --config-name useModal"
   },
   "repository": {
     "type": "git",
