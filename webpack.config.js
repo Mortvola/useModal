@@ -8,6 +8,10 @@ const config = (name, env) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: `${name}.js`,
+    library: {
+      name: name,
+      type: 'commonjs2',     
+    }
   },
   module: {
     rules: [
