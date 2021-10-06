@@ -70,7 +70,6 @@ function useModal<T>(
 }
 
 export function makeUseModal<T>(Dialog: React.FC<T & ModalProps>, props?: Record<string, unknown>) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   return (): UseModalType<T & { onHide?: () => void }> => useModal<T>(Dialog, props);
 }
 
