@@ -14,6 +14,7 @@ const config = (name, env) => ({
   },
   externals: {
     'react': 'commonjs react',
+    'react-dom': 'commonjs react-dom',
   },
   module: {
     rules: [
