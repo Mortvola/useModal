@@ -13,8 +13,9 @@ const config = (name, env) => ({
     }
   },
   externals: {
-    'react': 'commonjs react',
-    'react-dom': 'commonjs react-dom',
+    'react': 'commonjs2 react',
+    'react-dom': 'commonjs2 react-dom',
+    'react-bootstrap': 'commonjs2 react-bootstrap',
   },
   module: {
     rules: [
