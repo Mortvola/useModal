@@ -9,7 +9,7 @@ const config = (name, env) => ({
     path: path.resolve(__dirname, 'dist'),
     filename: `${name}.js`,
     library: {
-      type: 'commonjs',
+      type: 'commonjs2',
     }
   },
   externals: {
