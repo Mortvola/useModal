@@ -13,7 +13,7 @@ const config = (name, env) => ({
     }
   },
   externals: {
-    'react': 'react',
+    'react': 'commonjs react',
   },
   module: {
     rules: [
