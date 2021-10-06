@@ -12,6 +12,10 @@ const config = (name, env) => ({
       type: 'commonjs',
     }
   },
+  externals: {
+    'react': 'React',
+    'react-dom':  'ReactDom',
+  },
   module: {
     rules: [
       { test: /.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
