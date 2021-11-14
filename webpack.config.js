@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = (name, env) => ({
   name,
@@ -23,7 +24,7 @@ const config = (name, env) => ({
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -49,6 +50,11 @@ const config = (name, env) => ({
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.css',
+    }),
+  ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
