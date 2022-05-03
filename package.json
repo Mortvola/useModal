@@ -1,6 +1,6 @@
 {
   "name": "@mortvola/usemodal",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "main": "./dist/useModal.js",
   "types": "./dist/useModal.d.ts",
@@ -26,19 +26,18 @@
     "dist",
     "package.json"
   ],
-  "dependencies": {},
   "peerDependencies": {
-    "react": "^17.0.2",
+    "react": "^18.1.0",
     "react-bootstrap": "^2.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
+    "@types/react": "^18.0.8",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.4.5",
-    "react": "^17.0.2",
+    "react": "^18.1.0",
     "react-bootstrap": "^2.0.2",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.1.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.2",
