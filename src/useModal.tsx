@@ -56,7 +56,6 @@ function useModal<T>(
         scrollable
         enforceFocus={false}
         {...modalProps}
-        contentClassName={styles.modalContentFix}
       >
         <Dialog {...props} setShow={localSetShow} onConfirm={handleSave} />
       </Modal>
